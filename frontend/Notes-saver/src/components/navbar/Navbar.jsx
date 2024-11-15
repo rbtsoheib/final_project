@@ -1,5 +1,6 @@
 import React from 'react';
 import ProfileInfo from '../Cards/ProfileInfo';
+import { useNavigate } from 'react-router-dom'; 
 import SearchBar from '../SearchBar/SearchBar';
 
 const Navbar = () => {
@@ -7,7 +8,7 @@ const Navbar = () => {
   const navigate = useNavigate() ; 
 
   const OnLogout = () => {
-    Navigate("/login");
+    navigate("/login");
   };
 
   return (
@@ -19,6 +20,6 @@ const Navbar = () => {
     </div>
     </>
   )
-}
+};
 
 export default Navbar;
