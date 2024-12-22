@@ -22,6 +22,8 @@ const Home = () => {
         </div>
       </div>
 
+      <div></div>
+
       <button className="w-16 h-16 items-center justify-between rounded-2xl bg-primary hover:bg-blue-600 absolute right-10 bottom-10" onClick={() => {}}>
         <MdAdd className="text-[62px] text-white" />
       </button>
