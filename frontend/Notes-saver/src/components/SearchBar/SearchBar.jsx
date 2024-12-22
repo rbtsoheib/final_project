@@ -8,11 +8,15 @@ const SearchBar = ({ value, onChange, handleSearch, onClearSearch }) => {
       <input 
       type="text"
       placeholder='Search Notes'
-      className='w-full text-sm bg-transparent py-[11px] outline-none'
+      className='w-full text-sm bg-transparent pt-[10px] pb-[20px] outline-none'
       value={value}
       onChange={onChange}
       />
-      <FaMagnifyingGlass className='text-slate-400 cursor-pointer hover:text-black' onClick={handleSearch}/>
+
+      {value && (<IoMdClose className="text-xl text-slate-500 cursor-pointer hover:text-black mr-3 ml-[245px]" onClick={onClearSearch} />)}
+
+      <FaMagnifyingGlass className='text-slate-400 cursor-pointer hover:text-black ml-[275px]' onClick={handleSearch}/>
+
     </div>
   )
 }

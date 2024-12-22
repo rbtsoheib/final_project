@@ -35,4 +35,8 @@
 
   }
 
+  .icon-btn{
+
+    @apply text-xl text-slate-300 cursor-pointer hover:text-primary;
+  }
 }
