@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import NoteCard from "../../components/Cards/NoteCard";
 import { MdAdd } from "react-icons/md";
+import AddEditNotes from "./AddEditNotes";
+import Modal from "react-modal";
 
 const Home = () => {
+  const [openAddEditModal, setOpenAddEditModal] = useState({
+    isShown: false,
+    type: "add",
+    date: null,
+  });
+
   return (
     <>
       <Navbar />
@@ -22,11 +30,28 @@ const Home = () => {
         </div>
       </div>
 
-      <div></div>
-
-      <button className="w-16 h-16 items-center justify-between rounded-2xl bg-primary hover:bg-blue-600 absolute right-10 bottom-10" onClick={() => {}}>
+      <button
+        className="w-16 h-16 items-center justify-between rounded-2xl bg-primary hover:bg-blue-600 absolute right-10 bottom-10"
+        onClick={() => {
+          setOpenAddEditModal({isShown:true, type:"date", data: null})
+        }}
+      >
         <MdAdd className="text-[62px] text-white" />
       </button>
+
+      <Modal
+        isOpen={openAddEditModal.isShown}
+        onRequestClose={() => {}}
+        style={{
+          overlay: {
+            backgroundColor: "rgba(0, 0, 0, 0.2)",
+          },
+        }}
+        contentLabel=""
+        className="w-[40%] max-h-3/4 bg-white rounded-md mx-auto mt-14 p-5 overflow-scroll"
+      >
+        <AddEditNotes />
+      </Modal>
     </>
   );
 };
