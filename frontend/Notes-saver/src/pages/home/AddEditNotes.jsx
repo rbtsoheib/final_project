@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import TagInput from "../../components/input/TagInput";
+// import TagInput from "../../components/input/TagInput";
 
 const AddEditNotes = () => {
 
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [tags, setTags] = useState([]);
+  // const [tags, setTags] = useState([]);
 
   return (
     <div>
@@ -31,12 +31,12 @@ const AddEditNotes = () => {
           onChange={({ target }) => setContent(target.value)}
         ></textarea>
 
-      <div className="">
+      {/* <div className="">
         <label className="input-label">TAGS</label>
         <TagInput tags={tags} setTags={setTags}/>
-      </div>
-
-      <button className="btn-primary font-medium mt-5 p-3" onClick={() => {}}>ADD</button>
+      </div> */}
+ 
+ <button className="btn-primary font-medium mt-5 p-3" onClick={() => {}}>ADD</button> 
 
       </div>
     </div>
