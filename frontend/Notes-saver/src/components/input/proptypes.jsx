@@ -1,18 +1,18 @@
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
-const PropTypes = ({props}) => {
+// const PropTypes = ({props}) => {
     
-  return(
-    <div>
-      <h1 className="text-5xl">{props}</h1>
-    </div>
-  );
-};
+//   return(
+//     <div>
+//       <h1 className="text-5xl">{props}</h1>
+//     </div>
+//   );
+// };
 
-PropTypes.propTypes = {
+// PropTypes.propTypes = {
 
-  props: PropTypes.object.isRequired,
+//   props: PropTypes.object.isRequired,
 
-}
+// }
 
-export default PropTypes;
+// export default PropTypes;
