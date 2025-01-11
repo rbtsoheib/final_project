@@ -39,9 +39,7 @@ app.post("/create-account", async (req, res) => {
     }
 
     if(!email){
-        return res
-        .status(400)
-        .json({ error: true, message: "email is required"});
+        return res.status(400).json({ error: true, message: "email is required"});
     }
 
     if (!password) {
@@ -68,7 +66,7 @@ app.post("/create-account", async (req, res) => {
     await user.save();
 
     const accessToken = jwt.sign({ user }, process.env.ACCESS_TOKEN_SECRET, {
-        expiresIn:"36000m",
+        expiresIn:"3600000000m",
     });
 
     return res.json({
