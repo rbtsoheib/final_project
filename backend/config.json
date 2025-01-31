@@ -1,3 +1,3 @@
 {
-    "connectionString": ""
+    "connectionString": "mongodb+srv://first-user:first-user-123@notes-saver.lvud0.mongodb.net/?retryWrites=true&w=majority&appName=notes-saver"
 }
